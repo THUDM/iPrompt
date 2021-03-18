@@ -5,6 +5,8 @@ The code is provided in the "chinese_ip" and "english_ip" package.
 
 Chinese Inverse Prompting:
 
+edited from https://github.com/THUDM/Chinese-Transformer-XL
+
 Train:
 scripts/ds_pretrain_gpt2_29B.sh
 
@@ -28,7 +30,12 @@ python tools/generate_samples_sgpu.py --use-set 1
 Data:
 
 Chinese Language Model:
-TBD
+
+See https://github.com/THUDM/Chinese-Transformer-XL
+
+English Language Model:
+
+See https://github.com/NVIDIA/Megatron-LM
 
 Generated TCPs:
 
