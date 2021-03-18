@@ -1,26 +1,34 @@
 # InversePrompting
 
 Code:
-The code is provided in the code package.
+The code is provided in the "chinese_ip" and "english_ip" package.
+
+Chinese Inverse Prompting:
 
 Train:
 scripts/ds_pretrain_gpt2_29B.sh
 
-Generate:
+Direct Generation:
 scripts/generate_text.sh
 
 Generate Poems:
-generate_pms_refined.py  --Inverse Prompting +Reinforcement Learning for TCP Generation
+python generate_pms_refined.py  --Inverse Prompting for TCP Generation
 
-QA:
-generate_qa_desc.py  --Inverse Prompting for QA
+Generate QA:
+python generate_qa_desc.py  --Inverse Prompting for QA
+
+English Inverse Prompting: 
+
+edited from megatron-lm, follow its guide to download model weights and put them under the correct path, then run
+
+python tools/generate_samples_sgpu.py --use-set 1
+
 
 
 Data:
 
-Pre-trained Model: 
-To be released 
-
+Chinese Language Model:
+TBD
 
 Generated TCPs:
 
