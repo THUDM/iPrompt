@@ -1,5 +1,7 @@
 # InversePrompting
 
+# Paper: Controllable Generation from Pre-trained Language Models via Inverse Prompting
+
 Code:
 The code is provided in the "chinese_ip" and "english_ip" package.
 
@@ -60,8 +62,12 @@ based on prompts:
 QA: data/qa-records.jsonl
 poem: data/poem-records.jsonl
 
+If you have any questions, please contact zoux18@mails.tsinghua.edu.cn 
 
-
-
-
-
+Please cite
+@article{zou2021controllable,
+  title={Controllable Generation from Pre-trained Language Models via Inverse Prompting},
+  author={Zou, Xu and Yin, Da and Zhong, Qingyang and Yang, Hongxia and Yang, Zhilin and Tang, Jie},
+  journal={arXiv preprint arXiv:2103.},
+  year={2021}
+}
