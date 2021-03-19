@@ -25,7 +25,7 @@ edited from megatron-lm, follow its guide to download model weights and put them
 
 python tools/generate_samples_sgpu.py --use-set 1
 
-
+for inverse prompting.
 
 Data:
 
