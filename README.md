@@ -62,6 +62,10 @@ based on prompts:
 QA: data/qa-records.jsonl
 poem: data/poem-records.jsonl
 
+Paper: full version of paper(generated using XeLaTeX) is included in this repo. The arXiv version uses pdflatex and tables with Chinese characters are transferred to English as pdflatex does not allow UTF-8 characters(non-English languages) presence. 
+
+paper.pdf
+
 If you have any questions, please contact zoux18@mails.tsinghua.edu.cn 
 
 Please cite
