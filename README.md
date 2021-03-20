@@ -7,7 +7,7 @@ The code is provided in the "chinese_ip" and "english_ip" package.
 
 Chinese Inverse Prompting:
 
-edited from https://github.com/THUDM/Chinese-Transformer-XL
+based on https://github.com/THUDM/Chinese-Transformer-XL
 
 Train:
 <pre>
@@ -28,7 +28,7 @@ python generate_qa_desc.py  --Inverse Prompting for QA
 </pre>
 English Inverse Prompting: 
 
-edited from megatron-lm, follow its guide to download model weights and put them under the correct path, then run
+based on megatron-lm https://github.com/NVIDIA/Megatron-LM, follow its guide to download model weights and put them under the correct path, then run
 <pre>
 python tools/generate_samples_sgpu.py --use-set 1
 </pre>
