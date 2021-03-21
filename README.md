@@ -80,9 +80,7 @@ https://pretrain.aminer.cn/app/qa
 Poem Generation: 
 https://pretrain.aminer.cn/apps/poetry.html
 
-Note that the demo version is updating frequently and may be more advanced than the repo version. 
-
-
+Note that the demo version is updating frequently and may be different from the repo version. 
 
 If you have any questions, please contact zoux18@mails.tsinghua.edu.cn 
 
