@@ -71,6 +71,19 @@ Paper: full version of paper(generated using XeLaTeX) is included in this repo. 
 <pre>
 paper.pdf
 </pre>
+
+There's also a demo where you can try your own titles for QA/poem generation.
+
+QA:
+https://pretrain.aminer.cn/app/qa
+
+Poem Generation: 
+https://pretrain.aminer.cn/apps/poetry.html
+
+Note that the demo version is updating frequently and may be more advanced than the repo version. 
+
+
+
 If you have any questions, please contact zoux18@mails.tsinghua.edu.cn 
 
 Please cite
