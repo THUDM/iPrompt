@@ -72,7 +72,7 @@ Paper: full version of paper(generated using XeLaTeX) is included in this repo. 
 paper.pdf
 </pre>
 
-There's also a demo where you can try your own titles for QA/poem generation.
+There's also a demo where you can try your own questions/titles for QA/poem generation.
 
 QA:
 https://pretrain.aminer.cn/app/qa
