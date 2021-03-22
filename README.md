@@ -89,7 +89,7 @@ Please cite
 @article{zou2021controllable,
   title={Controllable Generation from Pre-trained Language Models via Inverse Prompting},
   author={Zou, Xu and Yin, Da and Zhong, Qingyang and Yang, Hongxia and Yang, Zhilin and Tang, Jie}, 
-  journal={arXiv preprint arXiv:2103.},  
+  journal={arXiv preprint arXiv:2103.10685},  
   year={2021}  
 }
 </pre>
