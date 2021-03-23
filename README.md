@@ -9,6 +9,11 @@ Chinese Inverse Prompting:
 
 based on https://github.com/THUDM/Chinese-Transformer-XL
 
+Packages Required
+<pre>
+torch,apex,boto3,sentencepiece,nltk,jsonlines,filelock,deepspeed,pypinyin,pandas
+</pre>
+
 Train:
 <pre>
 bash scripts/ds_pretrain_gpt2_29B.sh
