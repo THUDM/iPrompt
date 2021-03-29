@@ -87,6 +87,64 @@ https://pretrain.aminer.cn/apps/poetry.html
 
 Note that the demo version is updating frequently and may be different from the repo version. 
 
+Some examples of poems it generates:
+
+<pre>
+咏特朗普
+
+天下岂有华盛顿,外强中衰叹累累。
+白宫总统成陪衬,螳臂挡车虎尾寒。
+坐观美国朝野势,风雨飘摇现暴难。
+拜登再任难抵挡,明年恐将命归残。
+</pre>
+
+<pre>
+夜过虹桥机场 
+
+卢浦斜晖里,西楼醉客行。
+影侵双塔晚,灯落一城明。
+空客还频顾,航灯未可惊。
+空留城市夜,月映水帘星。
+</pre>
+
+<pre>
+排队购房作 
+
+向晚万人候,售楼幢馅齐。
+验资堪买主,瞧室亦堪栖。
+回柱瞻佳处,连楼仰远姿。
+殷勤申买者,莫待扣扉期。
+</pre>
+
+<pre>
+论资本主义 
+
+若为自由故,如今逐利逃。
+入城操法律,两股战空槽。
+漂白藏珠玉,欢呼夺锦袍。
+管窥矜势利,夸视堕尘劳。
+</pre>
+
+<pre>
+赠美国友人
+
+清远寄吴士,华州逢旧知。
+大洋环万里,学馆阻三时。
+道别殷勤意,地连海峤西。
+同来艰运日,异域远风姿。
+</pre>
+
+<pre>
+安克雷奇中美会谈
+
+特务狂声振,朗官降虏庭。
+普天皆窃笑,攻守几无惊。
+入市商人拜,国殇将士迎。
+会同诛狡寇,世界定清明。
+</pre>
+
+
+
 If you have any questions, please contact zoux18@mails.tsinghua.edu.cn 
 
 Please cite
