@@ -90,12 +90,12 @@ Note that the demo version is updating frequently and may be different from the 
 Some examples of poems it generates:
 
 <pre>
-咏特朗普
+比特币
 
-天下岂有华盛顿,外强中衰叹累累。
-白宫总统成陪衬,螳臂挡车虎尾寒。
-坐观美国朝野势,风雨飘摇现暴难。
-拜登再任难抵挡,明年恐将命归残。
+外挖无穷洞,机神犹未休。
+卡中窥币影,池里验沙流。
+屡载吸金主,孤深渍盗求。
+方知区块链,本是古来游。
 </pre>
 
 <pre>
