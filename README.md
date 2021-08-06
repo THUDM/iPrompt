@@ -11,8 +11,9 @@ based on https://github.com/THUDM/Chinese-Transformer-XL
 
 Packages Required
 <pre>
-torch,apex,boto3,sentencepiece,nltk,jsonlines,filelock,deepspeed,pypinyin,pandas
+torch,apex,boto3,sentencepiece,nltk,jsonlines,filelock,deepspeed=0.3.16,pypinyin,pandas
 </pre>
+ 
 
 Train:
 <pre>
