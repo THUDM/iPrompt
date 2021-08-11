@@ -1,4 +1,7 @@
 
+from pypinyin import pinyin,FINALS, FINALS_TONE,TONE3
+import jsonlines
+
 def cilin():
     f=open("cilin.txt",'r')
     t=f.readlines()
@@ -68,23 +71,12 @@ def checkrhyself(sentence,shengdict,rhy):
         st=st[:-1]
         fullst=True
     
-    l1=pinyin(st,style=TONE3)
-
-    if len(l1)<len(st):
-        print(l1,sentence)
-        return 1
-    for i in l1:
-        if len(i[0])<2:
-            return 1
-    if len(st)<=3:
-        return 2
-    
-    
     for i in st:
         if not(i in shengdict):
             print(sentence,i)
             return 1
-      
+    if len(st)<2:
+        return 2
     srhy=rhy%3
     
     pz1=shengdict[st[1]]
@@ -154,12 +146,14 @@ def checkrhy(sentence,last,imp,shengdict,req=0):
 
     for i in range(len(sentence)):
         if (i<len(l1)) and (i<len(l2)):
-            if not(sentence[i] in shengdict):
-                print(sentence,sentence[i])
+            if (not(sentence[i] in shengdict)) :
+                if not('end' in sentence):
+                    print(sentence,sentence[i])
                 return -1000
             st1=shengdict[sentence[i]]
-            if not(last[i] in shengdict):
-                print(last,last[i])
+            if (not(last[i] in shengdict)) :
+                if not('end' in last):
+                    print(last,last[i])
                 return -1000
             sr1=shengdict[last[i]]
             dst=0
@@ -190,6 +184,25 @@ def checkrhy(sentence,last,imp,shengdict,req=0):
             if l1[i][0][:-1]==l1[j][0][:-1]:
                 disobey-=7/len(l1)
     return disobey
+    
+def getlastsentence(str):
+    w=str.replace('。',',').replace('，',',').replace('？',',').replace('?',',').replace(' ',',').replace('！',',').replace('!',',').replace(':',',').replace(' ','')
+    sp=w.split(',')
+    fom=sp[-1]
+    if len(fom)==0:
+        fom=sp[-2]
+    return fom+str[-1]
+
+def get2sentencebefore(str):
+    w=str.replace('。',',').replace('，',',').replace('？',',').replace('?',',').replace(' ',',').replace('！',',').replace('!',',').replace(':',',').replace(' ','')
+    sp=w.split(',')
+    idk=-1
+    while len(sp[idk])==0:
+        idk-=1
+    idk-=1
+    while len(sp[idk])==0:
+        idk-=1
+    return sp[idk]
 
 def checksentence(sentence,original_context,min_length,max_length,endnote,dic,wdic,curvote=0,yayun=None,rhy=0):
     
@@ -265,7 +278,8 @@ def checksentence(sentence,original_context,min_length,max_length,endnote,dic,wd
         
         for i in sentence[:-1]:
             if not(i in wdic):
-                print(sentence,i)
+                if not('end' in sentence):
+                    print(sentence,i)
                 return 1
                 
         
@@ -318,3 +332,49 @@ def getrhy(sentence,rhy,wdic):
     return 0
     
 
+def check2compare(sentence1,sentence2,imp,wdic):
+    s1=sentence1.replace('。','').replace('，','').replace('？','').replace('?','').replace('  ','').replace('！','').replace('!','').replace(',','')
+    s2=sentence2.replace('。','').replace('，','').replace('？','').replace('?','').replace(' ','').replace('！','').replace('!','').replace(',','')
+    if len(s1)!=len(s2):
+        return -1000
+   
+        
+    score=0
+           
+    
+    w1=wdic[s1[-1]]
+    w2=wdic[s2[-1]]
+    score-=imp*0.75
+    if (s1[-1]==s2[-1]):
+        score-=imp*3.5
+    for i in w1:
+        if i in w2:
+            score+=imp*1.5
+            break
+    
+    
+        
+    return score
+
+def check2com(sentence,org_context,imp,dic,wdic):
+    
+    #before2=get2sentencebefore(org_context)
+    before1=getlastsentence(org_context)[:-1]
+    # s1=check2compare(sentence,before2,imp,wdic)
+    if imp==1:
+        s2=checkrhy(sentence,before1,imp+0.5,dic,req=1)
+    else:
+        s2=checkrhy(sentence,before1,imp,dic)
+    sc=s2
+    
+    org=org_context.replace('。',',').replace('!',',').replace('?',',')
+    for i in range(len(sentence)-1):
+        if sentence[i] in org:
+            sc-=3
+            if sentence[i:i+2] in org:
+                sc-=5
+                if (i==len(sentence)-2):
+                    sc-=35
+            
+        
+    return sc

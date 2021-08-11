@@ -42,11 +42,7 @@ from utils import print_rank_0
 from pretrain_gpt2 import get_model
 from pypinyin import pinyin,FINALS, FINALS_TONE,TONE3
 import jsonlines
-from new_tkl import cilin
-from new_tkl import checkrhyself
-from new_tkl import checkrhy
-from new_tkl import checksentence
-from new_tkl import getrhy
+from new_tkl import *
 def setup_model(args):
     """Setup model and optimizer."""
 
@@ -313,74 +309,9 @@ def getlength(str):
     
     return len(sp[-2])
 
-def getlastsentence(str):
-    w=str.replace('。',',').replace('，',',').replace('？',',').replace('?',',').replace(' ',',').replace('！',',').replace('!',',').replace(':',',').replace(' ','')
-    sp=w.split(',')
-    fom=sp[-1]
-    if len(fom)==0:
-        fom=sp[-2]
-    return fom+str[-1]
 
-def get2sentencebefore(str):
-    w=str.replace('。',',').replace('，',',').replace('？',',').replace('?',',').replace(' ',',').replace('！',',').replace('!',',').replace(':',',').replace(' ','')
-    sp=w.split(',')
-    idk=-1
-    while len(sp[idk])==0:
-        idk-=1
-    idk-=1
-    while len(sp[idk])==0:
-        idk-=1
-    return sp[idk]
 
-def check2compare(sentence1,sentence2,imp,wdic):
-    s1=sentence1.replace('。','').replace('，','').replace('？','').replace('?','').replace('  ','').replace('！','').replace('!','').replace(',','')
-    s2=sentence2.replace('。','').replace('，','').replace('？','').replace('?','').replace(' ','').replace('！','').replace('!','').replace(',','')
-    if len(s1)!=len(s2):
-        return -1000
-    num=0
-    for i in range(len(s1)):
-        if s1[i]==s2[i]:
-           num+=1
-        
-    score=0.5-num*num*2.5
-           
-    
-    w1=wdic[s1[-1]]
-    w2=wdic[s2[-1]]
-    score-=imp*0.75
-    if (s1[-1]==s2[-1]):
-        score-=imp*3.5
-    for i in w1:
-        if i in w2:
-            score+=imp*1.5
-            break
-    
-    
-        
-    return score
 
-def check2com(sentence,org_context,imp,dic,wdic):
-    
-    before2=get2sentencebefore(org_context)
-    before1=getlastsentence(org_context)[:-1]
-    s1=check2compare(sentence,before2,imp,wdic)
-    if imp==1:
-        s2=checkrhy(sentence,before1,imp+0.5,dic,req=1)
-    else:
-        s2=checkrhy(sentence,before1,imp,dic)
-    sc=s1+s2
-    
-    org=org_context.replace('。',',').replace('!',',').replace('?',',')
-    for i in range(len(sentence)-1):
-        if sentence[i] in org:
-            sc-=3
-            if sentence[i:i+2] in org:
-                sc-=5
-                if (i==len(sentence)-2):
-                    sc-=35
-            
-        
-    return sc
     
     
     
@@ -669,7 +600,7 @@ def set_args():
     args.num_layers=32
     args.hidden_size=2560
     #args.load="/workspace/xuzou/useful_models/ts_human"
-    args.load="/workspace/xuzou/useful_models/poems/dl"
+    args.load="/dataset/fd5061f6/baiduyundata/xuzou/urgent/poems"
     args.num_attention_heads=32
     args.max_position_embeddings=1024
     args.tokenizer_type="ChineseSPTokenizer"
