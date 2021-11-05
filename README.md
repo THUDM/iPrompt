@@ -171,6 +171,7 @@ Some examples of poems it generates:
 
 If you have any questions, or if you wanna to ask for  fine-tuned models (诗/词) based on self-training, please contact zoux18@mails.tsinghua.edu.cn 
 
+<pre>
 @inproceedings{10.1145/3447548.3467418,
 author = {Zou, Xu and Yin, Da and Zhong, Qingyang and Yang, Hongxia and Yang, Zhilin and Tang, Jie},
 title = {Controllable Generation from Pre-Trained Language Models via Inverse Prompting},
@@ -187,5 +188,5 @@ keywords = {controllable generation, poem generation, language modeling, beam se
 location = {Virtual Event, Singapore},
 series = {KDD '21}
 }
-
+</pre>
 
