@@ -136,15 +136,38 @@ Some examples of poems it generates:
 </pre>
 
 <pre>
-安克雷奇中美会谈
+杨振宁院士百岁生日
 
-特务狂声振,朗官降虏庭。
-普天皆窃笑,攻守几无惊。
-入市商人拜,国殇将士迎。
-会同诛狡寇,世界定清明。
+星河耿耿落辉英,无限苍穹任去行。
+宇宙旋还成壮史,三光断续又分明。
+青榆绿水芝兰秀,邓老仙山桂蕊轻。
+闪闪寰球同寿者,几人夔魅合清声。 
+</pre>
+
+<pre>
+中国足球
+
+寿张运动人,比类皆惊队。
+南建蹴鞠师,山呼千万众。
+我军蒙汉旗,乘夏凌秋阵。
+流血触藩篱,破头何所恨。
+</pre>
+
+<pre>
+江城子 通胀
+
+混全钢铁伏完坚。铸山钱,水淹天。蛇吞象箸,狐食虎餐前。半化半人残骨贱,丸美药,不传偏。
+饱谙此术雇员闲。算来年,利究颠。元轻钞重,市物贵颠连。通缩预期成祸兆,君看取,券如烟。
+</pre>
+
+<pre>
+沁园春 黑洞  
+
+无数光年,亘古纠缠,暗物质围。引力何须问,超球绕日,火轮灭迹,散为千堆。奇点协常,类星暴起,巨穴茫茫冰壁垂。空区哪,似可凭依拟,地底窥来。
+知君才调横飞,逸气黒旋磨折堕微。掩鼻偷看怯,魔方急掷,骇人大半,怕放谁回。题破乾坤,猜中月魄,悟入风云际会开。留丹灶,令心明透拜,俱向尘埃。
 </pre>
 
 
 
-If you have any questions, please contact zoux18@mails.tsinghua.edu.cn 
+If you have any questions, or if you wanna to ask for  fine-tuned models (诗/词) based on self-training, please contact zoux18@mails.tsinghua.edu.cn 
 
