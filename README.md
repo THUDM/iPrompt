@@ -2,6 +2,8 @@
 
 # Paper: Controllable Generation from Pre-trained Language Models via Inverse Prompting
 
+# For Faster Implementation (10x speed and higher quality and support English), see https://github.com/THUDM/GLM-iprompt
+
 Code:
 The code is provided in the "chinese_ip" and "english_ip" package.
 
